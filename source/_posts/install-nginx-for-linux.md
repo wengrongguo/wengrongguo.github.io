@@ -41,7 +41,7 @@ yum -y install gcc-c++
 ### 预配置
 将几个源码包放到同一个目录，并进行解压缩，进入解压缩后的nginx源码目录进行预配置（--prefix指定安装目录）
 ```
-./configure --prefix=/opt/nginx --with-pcre=../pcre-8.37 --with-zlib=../zlib-1.2.8 --with-openssl=../openssl-1.0.2d --with-http_stub_status_module --with-http_ssl_module
+./configure --prefix=/opt/nginx --with-pcre=../pcre-8.37 --with-zlib=../zlib-1.2.8 --with-openssl=../openssl-1.0.2d --with-http_stub_status_module --with-http_ssl_module --with-ipv6
 ```
 
 ### 编译安装
