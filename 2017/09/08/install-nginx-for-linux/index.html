@@ -93,7 +93,7 @@
 
 挂载光盘1mount -t iso9660 -o loop rhel-server-6.5-x86_64-dvd.iso system_dvd
 配置本地yum仓库源(/etc/yum.repos.d/local.repo)12345[local]name=local  - S">
-<meta property="og:updated_time" content="2018-04-21T16:25:20.342Z">
+<meta property="og:updated_time" content="2019-10-14T01:24:25.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下安装Nginx">
 <meta name="twitter:description" content="准备工作系统条件
@@ -385,7 +385,7 @@
 <li>openssl：用于支持加解密</li>
 <li>pcre：用于支持正则表达写法</li>
 </ul>
-<h1 id="安装工作"><a href="#安装工作" class="headerlink" title="安装工作"></a>安装工作</h1><h3 id="预配置"><a href="#预配置" class="headerlink" title="预配置"></a>预配置</h3><p>将几个源码包放到同一个目录，并进行解压缩，进入解压缩后的nginx源码目录进行预配置（–prefix指定安装目录）<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">./configure</span> <span class="params">--prefix=/opt/nginx</span> <span class="params">--with-pcre=</span><span class="string">../pcre-8.37</span> <span class="params">--with-zlib=</span><span class="string">../zlib-1.2.8</span> <span class="params">--with-openssl=</span><span class="string">../openssl-1.0.2d</span> <span class="params">--with-http_stub_status_module</span> <span class="params">--with-http_ssl_module</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="安装工作"><a href="#安装工作" class="headerlink" title="安装工作"></a>安装工作</h1><h3 id="预配置"><a href="#预配置" class="headerlink" title="预配置"></a>预配置</h3><p>将几个源码包放到同一个目录，并进行解压缩，进入解压缩后的nginx源码目录进行预配置（–prefix指定安装目录）<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">./configure</span> <span class="params">--prefix=/opt/nginx</span> <span class="params">--with-pcre=</span><span class="string">../pcre-8.37</span> <span class="params">--with-zlib=</span><span class="string">../zlib-1.2.8</span> <span class="params">--with-openssl=</span><span class="string">../openssl-1.0.2d</span> <span class="params">--with-http_stub_status_module</span> <span class="params">--with-http_ssl_module</span> <span class="params">--with-ipv6</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><p>预配置成功后，还是在当前目录位置进行编译安装<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">make</span> &amp;&amp; <span class="built_in">make</span> install</span><br></pre></td></tr></table></figure></p>
 <h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>进入安装后目录下的子目录sbin<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/opt/nginx/sbin</span></span><br></pre></td></tr></table></figure></p>
 <p>启动nginx，查看是否启动成功，并通过浏览器进行访问<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">./nginx</span></span><br></pre></td></tr></table></figure></p>
@@ -594,7 +594,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
